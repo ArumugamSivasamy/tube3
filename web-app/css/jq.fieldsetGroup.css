@@ -1,0 +1,77 @@
+/*
+.fieldsetgroup, .fieldsetgroup.expanded{
+	border:1px solid #aaa;   
+}
+
+.fieldsetgroup.collapsed{
+	border:0;
+	border-top:1px solid #aaa;
+}
+*/
+
+.fieldsetgroup {
+	font-family: "Tahoma", "Trebuchet MS", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif;
+	font-size: 0.95em;
+	display: table;
+	vertical-align: top;
+    *min-width: 65%;
+    margin-bottom: 4px;
+/*	overflow:auto; */
+}
+
+.fieldsetgroup fieldSetTitle{
+	display: block;
+	width: 100%;
+	line-height: 40px;
+	color: #333333;
+	border: 0;
+	border-bottom: 1px solid #e5e5e5;
+	cursor:pointer;
+	padding-left: 8px;
+}
+
+.displayGroup .panel-heading span{
+	margin-left:18px;
+	padding-top:6px;
+	padding-bottom:6px;
+	font-weight:bold;
+}
+
+.displayGroup.expanded .panel-heading{
+	background-image: url(../images/icons/shape_bottom_line.png);
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+
+
+.displayGroup.collapsed .panel-heading{
+	background-image: url(../images/icons/shape_square_empty.png);
+	background-repeat: no-repeat;
+	background-position: center left;
+	opacity: 0.9;
+}
+
+.fieldsetgroup .fieldsetgroup-contents {
+	background-color: #ffffff;
+	padding: 6px;
+}
+
+.fieldsetgroup li {
+	margin-left: 1em;	
+}
+
+.small-font>.fieldsetgroup-contents {
+	font-size: 0.85em;
+}
+
+.displayGroup.collapsed .panel-body {
+	display: none;	
+}
+
+.displayGroup.expanded .panel-body {
+	display: block;	
+}
+
+.displayGroup .displayGroupActions {
+	float: right;
+}

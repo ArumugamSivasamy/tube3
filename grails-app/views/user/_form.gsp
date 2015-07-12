@@ -1,10 +1,12 @@
 <%@ page import="com.tube.profile.User" %>
 
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
+<div ng-app="myApp" ng-controller="costCtrl">
 
 <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'name', 'error')} required">
 	<label for="name">
-		<g:message code="user.name.label" default="Name" />
+		<g:message code="user.name.label" default="Full Name" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="name" required="" value="${userInstance?.name}"/>
@@ -110,3 +112,23 @@
 
 </div>
 
+</div>
+
+<script type="text/javascript">
+
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope,$http) {
+    $scope.taskName ="Arumugam";
+    var postUrl = "user/save";
+    $scope.createTask=function(){
+	var data={Name:$scope.taskName};
+	$http.post(postUrl,data).success(function(data,status,headers){
+		alert("task added");
+		$http.get(headers("location")).success(function(data){
+			$scope.tasks.push(data);
+			});
+
+		});
+    };
+});
+</script>
