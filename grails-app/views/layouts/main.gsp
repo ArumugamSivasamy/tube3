@@ -9,33 +9,34 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><g:layoutTitle default="Tube3"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<g:layoutHead />
 		<g:javascript library="application"/>
+		<r:require module="jqueryUi"/>
+		<r:layoutResources />
 		<style>
 		
-body {
-    padding-top: 50px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-}
-
-.navbar-fixed-top .nav {
-    padding: 15px 0;
-}
-
-.navbar-fixed-top .navbar-brand {
-    padding: 0 15px;
-}
-
-@media(min-width:700px) {
-    body {
-        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-    }
-
-    .navbar-fixed-top .navbar-brand {
-        padding: 15px 0;
-    }
-}
+			body {
+			    padding-top: 50px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+			}
+			
+			.navbar-fixed-top .nav {
+			    padding: 15px 0;
+			}
+			
+			.navbar-fixed-top .navbar-brand {
+			    padding: 0 15px;
+			}
+			
+			@media(min-width:700px) {
+			    body {
+			        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+			    }
+			
+			    .navbar-fixed-top .navbar-brand {
+			        padding: 15px 0;
+			    }
+			}
 		</style>	
-		<r:require module="jqueryUi"/>	
-		<r:layoutResources />
 	</head>
 	<body>
 		
@@ -62,9 +63,16 @@ body {
     			<input type="text" class="form-control" placeholder="Search">
   			</div>
   			<button type="submit" class="btn btn-default">Submit</button>
-  			<button type="submit" class="btn btn-default">SignUp</button>
-  			<button type="submit" class="btn btn-default">SignIn</button>
 		</form>
+                                 </ul>
+                                 <ul class="nav navbar-nav" >
+                                 <form class="navbar-form navbar-left" role="search">
+  			
+  			<div class="form-group">
+                                 <button type="submit" class="btn btn-default">SignUp</button>
+  			<button type="submit" class="btn btn-default">SignIn</button>
+  			
+  			</div></form>
                                  </ul>
             </div>
             <!-- /.navbar-collapse -->

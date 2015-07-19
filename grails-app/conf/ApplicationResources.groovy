@@ -5,8 +5,7 @@ modules = {
     }
 	
 	jqueryUi {
-		//dependsOn 'jquery-ui'
-		resource url: 'js/jquery-ui-1.10.3.custom.min.js'
+		resource url: 'js/jquery-ui-min.js'
 		resource url: 'js/bootstrap.min.js'
 		resource url: 'js/angular.js'
 		resource url: 'js/angular-route.js'

@@ -5,6 +5,7 @@ class UserUpload {
 	String fileName
 	String filePath
 	String fileType
+	String resourcePath
 	String searchName
 	Date dateUploaded
 	String comment
@@ -14,6 +15,7 @@ class UserUpload {
 		fileType(nullable:false)
 		searchName(nullable:true)
 		dateUploaded(nullable:true)
+		resourcePath(nullable:true) 
 		comment(nullable:true)
     }
 	
