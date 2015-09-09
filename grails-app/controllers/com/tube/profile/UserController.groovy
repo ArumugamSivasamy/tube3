@@ -23,8 +23,12 @@ class UserController {
         respond new User(params)
     }
 
+	def home(){}
+	
     @Transactional
     def save(User userInstance) {
+		
+		println "arumugam check data ${params}"
         if (userInstance == null) {
             notFound()
             return
@@ -34,7 +38,6 @@ class UserController {
             respond userInstance.errors, view:'create'
             return
         }
-
 		userInstance.password = params.password.encodeAsPassword()
 		
         userInstance.save flush:true

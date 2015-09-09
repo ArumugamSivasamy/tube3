@@ -18,7 +18,7 @@ class User {
 		login (nullable:true, unique: true, blank:false, size:5..255, matches:/[\S]+/,)
 		password(size:5..25, matches:/[\S]+/, validator:{ val, obj ->
 			println "password ${obj.password}"
-			println "confirm password ${confirmPassword}"
+			println "confirm password ${obj.confirmPassword}"
 			
 			if (obj.password != obj.confirmPassword)
 				return 'perf.sizing.user.password.dontmatch'
